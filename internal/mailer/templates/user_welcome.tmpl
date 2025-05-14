@@ -1,0 +1,48 @@
+{{define "subject"}}Welcome to APP_NAME!{{end}}
+
+{{define "plainBody"}}
+Hi,
+
+Thanks for signing up for a APP_NAME account. We're excited to have you on board!
+
+For future reference, your user ID number is {{.userID}}.
+
+To activate your APP_NAME account please visit https://example.com/users/activate and 
+enter the following code:
+
+{"token": "{{.activationToken}}"}
+
+Please note that this is a one-time use token and it will expire in 3 days.
+
+Thanks,
+
+The APP_NAME Team
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <p>Hi,</p>
+    <p>Thanks for signing up for a APP_NAME account. We're excited to have you on board!</p>
+    <p>For future reference, your user ID number is {{.userID}}.</p>
+    <p>
+    To activate your APP_NAME account please visit https://example.com/users/activate and 
+    enter the following code:
+    </p>
+    <pre><code>
+    {"token": "{{.activationToken}}"}
+    </code></pre>
+    <p>Please note that this is a one-time use token and it will expire in 3 days.</p>
+    <p>Thanks,</p>
+    <p>The APP_NAME Team</p>
+</body>
+
+</html>
+{{end}}
